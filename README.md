@@ -1,3 +1,5 @@
+NOTES: 本文原文来自： https://github.com/google/eng-practices
+
 # Google的工程实践文档
 
 Google has many generalized engineering practices that cover all languages and
