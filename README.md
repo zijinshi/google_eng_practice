@@ -1,4 +1,4 @@
-本文原文来自： [https://github.com/google/eng-practices]
+本文原文来自： [https://github.com/google/eng-practices](https://github.com/google/eng-practices)。
 
 # Google的工程实践文档
 
