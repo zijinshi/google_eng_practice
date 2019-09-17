@@ -41,11 +41,12 @@ being worked on, even if the CL isn't perfect.**
 **一般情况下，如果代码提交者的代码能显著提高代码库的质量，那么审核者就应该批准它，尽管它并不完美。**
 
 That is _the_ senior principle among all of the code review guidelines.
-这是所有代码评审指南的 _高级原则_。
+这是所有代码评审指南的 _最高原则_。
 
 There are limitations to this, of course. For example, if a CL adds a feature
 that the reviewer doesn't want in their system, then the reviewer can certainly
 deny approval even if the code is well-designed.
+当然，也有例外。例如，如果一次提交包含了一些系统中不应加入的功能，那么审核者就不应批准它，即使它设计得非常完美。
 
 
 A key point here is that there is no such thing as "perfect" code&mdash;there is
@@ -56,6 +57,7 @@ are suggesting. Instead of seeking perfection, what a reviewer should seek is
 _continuous improvement_. A CL that, as a whole, improves the maintainability,
 readability, and understandability of the system shouldn't be delayed for days
 or weeks because it isn't "perfect."
+还有一个关键点，那就是世上根本就没有“完美”的代码－－只有 _更好_ 的代码。审核者不应该要求代码提交者
 
 Reviewers should _always_ feel free to leave comments expressing that something
 could be better, but if it's not very important, prefix it with something like
