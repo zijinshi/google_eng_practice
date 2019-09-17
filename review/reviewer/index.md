@@ -2,7 +2,7 @@
 
 本文档包含若干部分，它们是对代码审核最佳实践的一些建议，这些建议都是基于长期的经验总结出来的。整篇文档各部分的衔接性并不大，我们可以阅读自己感兴趣的部分，而不必按顺序阅读全篇文档。当然，我们还是建议你全文阅读一遍，你会发现这篇文档对你非常有用。
 
--   [代码审核的标准 (The Standard of Code Review)](standard.md)
+-   [代码审核的标准 （The Standard of Code Review）](standard.md)
 -   [代码审核过程中要看些什么？ （What to Look For In a Code Review）](looking-for.md)
 -   [代码审核的步骤 （Navigating a CL in Review）](navigate.md)
 -   [代码审核的速度 （Speed of Code Reviews）](speed.md)
