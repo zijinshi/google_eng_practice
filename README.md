@@ -5,6 +5,7 @@ all projects. These documents represent our collective experience of various
 best practices that we have developed over time. It is possible that open source
 projects or other organizations would benefit from this knowledge, so we work to
 make it available publicly when possible.
+Google有很多常规的工程实践，它覆盖了公司内所有的编程语言和项目。
 
 Currently this contains the following documents:
 
