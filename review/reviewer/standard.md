@@ -1,4 +1,4 @@
-# The Standard of Code Review
+# 代码审核的标准 （The Standard of Code Review）
 
 
 
@@ -6,13 +6,16 @@ The primary purpose of code review is to make sure that the overall
 code health of Google's code
 base is improving over time. All of the tools and processes of code review are
 designed to this end.
+代码审核的目的是为了确保Google代码库中所有的代码保持在不断地改善过程中，代码审核的所有工具和过程都是为了这个目的而设计。
 
 In order to accomplish this, a series of trade-offs have to be balanced.
+为了达到目标，我们需要权衡得失。
 
 First, developers must be able to _make progress_ on their tasks. If you never
 submit an improvement to the codebase, then the codebase never improves. Also,
 if a reviewer makes it very difficult for _any_ change to go in, then developers
 are disincentivized to make improvements in the future.
+首先，开发人员必须能在任务上 _取得进展_ 。如果从没向代码库提交代码，那么代码库就不会改善。同时，如果审核者让代码提交者在提交代码时变得很困难的话，那么开发者会认为这种 _改进_ 没有益处，也就没有动力在未来的提交中做出改进。
 
 On the other hand, it is the duty of the reviewer to make sure that each CL is
 of such a quality that the overall code health of their codebase is not
@@ -20,24 +23,30 @@ decreasing as time goes on. This can be tricky, because often, codebases degrade
 through small decreases in code health over time, especially when a team is
 under significant time constraints and they feel that they have to take
 shortcuts in order to accomplish their goals.
+另一方面，审核者有责任确保提交者的代码质量，随着时间的推移，代码库的质量不会降低。这有点棘手，冰手三尺非一日之寒，代码库质量的降低是随着每次代码提交的微小降低累积而成的，尤其是当团队处于时间压力下时，为了完成任务，他们不得不采取一些临时方案。
 
 Also, a reviewer has ownership and responsibility over the code they are
 reviewing. They want to ensure that the codebase stays consistent, maintainable,
 and all of the other things mentioned in
 ["What to look for in a code review."](looking-for.md)
+另外，代码审核者对他们审核的代码有所有权和责任，他们应该确保代码库保持一致、可维护的，所有这些内容可参见[代码审核过程中要看些什么？ （What to Look For In a Code Review）](looking-for.md)这篇文章。
 
 Thus, we get the following rule as the standard we expect in code reviews:
+这样，我们希望在代码审核中能遵循如下原则：
 
 **In general, reviewers should favor approving a CL once it is in a state where
 it definitely improves the overall
 code health of the system
 being worked on, even if the CL isn't perfect.**
+**一般情况下，如果代码提交者的代码能显著提高代码库的质量，那么审核者就应该批准它，尽管它并不完美。**
 
 That is _the_ senior principle among all of the code review guidelines.
+这是所有代码评审指南的 _高级原则_。
 
 There are limitations to this, of course. For example, if a CL adds a feature
 that the reviewer doesn't want in their system, then the reviewer can certainly
 deny approval even if the code is well-designed.
+
 
 A key point here is that there is no such thing as "perfect" code&mdash;there is
 only _better_ code. Reviewers should not require the author to polish every tiny
