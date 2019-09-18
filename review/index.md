@@ -1,12 +1,11 @@
 # 代码审核开发者指南
 
 ## 目录
--   [介绍](#intro)
--   [代码审核者应该看什么?](#look_for)
-    -   [挑选代码审核者](#best_reviewers)
-    -   [亲自审核](#in_person)
--   [参考](#seealso)
-
+*   [介绍](#intro)
+*   [代码审核者应该看什么?](#look_for)
+    *   [挑选代码审核者](#best_reviewers)
+    *   [亲自审核](#in_person)
+*   [参考](#seealso)
 
 
 ## 介绍 {#intro}
