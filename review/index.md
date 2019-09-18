@@ -23,24 +23,22 @@ processes and policies.此文档是Google代码审核的规范说明流程和政
 
 
 This page is an overview of our code review process. There are two other large
-documents that are a part of this guide:
+documents that are a part of this guide:当前页面是对我们的代码审核过程作简要介绍，更多详情可阅读如下两篇文档：
 
--   **[How To Do A Code Review](reviewer/)**: A detailed guide for code
-    reviewers.
--   **[The CL Author's Guide](developer/)**: A detailed guide for developers
-    whose CLs are going through review.
+-   **[怎样进行代码审核](reviewer/)** ：针对代码审核者的指南。
+-   **[作者指南](developer/)** ：针对CL提交者的指南。
 
-## What Do Code Reviewers Look For? {#look_for}
+## 代码审核者应该看什么？ {#look_for}
 
-Code reviews should look at:
+代码审核者应该关注以下几项：
 
--   **Design**: Is the code well-designed and appropriate for your system?
+-   **Design**: Is the code well-designed and appropriate for your system?**设计**：代码是否设计良好？设计是否适合当前系统？
 -   **Functionality**: Does the code behave as the author likely intended? Is
-    the way the code behaves good for its users?
+    the way the code behaves good for its users?**功能**：代码实现的行为是否与作者的期望相符？代码实现的行为是否对用户友好。
 -   **Complexity**: Could the code be made simpler? Would another developer be
     able to easily understand and use this code when they come across it in the
-    future?
--   **Tests**: Does the code have correct and well-designed automated tests?
+    future?**复杂性**：代码可以更简单吗？如果将来有其他开发者使用这段代码，他能很快读懂吗？
+-   **Tests**: Does the code have correct and well-designed automated tests?**测试**：这段代码是否有正确的、设计良好的自动化测试？
 -   **Naming**: Did the developer choose clear names for variables, classes,
     methods, etc.?
 -   **Comments**: Are the comments clear and useful?
