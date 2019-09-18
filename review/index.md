@@ -3,8 +3,8 @@
 ## 目录
 *   [介绍](#intro)
 *   [代码审核者应该看什么?](#look_for)
-    *   [挑选代码审核者](#best_reviewers)
-    *   [亲自审核](#in_person)
+    *   [挑选最好的代码审核者](#best_reviewers)
+    *   [面对面审核](#in_person)
 *   [参考](#seealso)
 
 
@@ -39,38 +39,41 @@ documents that are a part of this guide:当前页面是对我们的代码审核�
     future?**复杂性**：代码可以更简单吗？如果将来有其他开发者使用这段代码，他能很快读懂吗？
 -   **Tests**: Does the code have correct and well-designed automated tests?**测试**：这段代码是否有正确的、设计良好的自动化测试？
 -   **Naming**: Did the developer choose clear names for variables, classes,
-    methods, etc.?
--   **Comments**: Are the comments clear and useful?
+    methods, etc.?**Naming**：在为变量、类名、方法等命名时，开发者应该选择清晰的名称。
+-   **Comments**: Are the comments clear and useful? **注释**：是否所有的注释都清晰、有用。
 -   **Style**: Does the code follow our
-    [style guides](http://google.github.io/styleguide/)?
--   **Documentation**: Did the developer also update relevant documentation?
+    [style guides](http://google.github.io/styleguide/)? 是否所有的代码都遵循代码[样式指南](http://google.github.io/styleguide/)？
+-   **Documentation**: Did the developer also update relevant documentation?**文档**：开发者是否更新了相关文档？
 
-See **[How To Do A Code Review](reviewer/)** for more information.
+See **[How To Do A Code Review](reviewer/)** for more information.详情请参见文档：[怎样进行代码审核](reviewer/)。
 
-### Picking the Best Reviewers {#best_reviewers}
+### 挑选最好的代码审核者 {#best_reviewers}
 
 In general, you want to find the *best* reviewers you can who are capable of
-responding to your review within a reasonable period of time.
+responding to your review within a reasonable period of time.一般来讲，你一定会找*最好*的代码审核者来帮你审核代码，这个人应该在你期望的时间内有能力对审核负责。
 
 The best reviewer is the person who will be able to give you the most thorough
 and correct review for the piece of code you are writing. This usually means the
 owner(s) of the code, who may or may not be the people in the OWNERS file.
 Sometimes this means asking different people to review different parts of the
 CL.
+最好的审核者是对你的代码能给出最彻底、最正确的反馈的人。这通常意味着，代码的责任人既可能在OWNES文件中，也可能不在。有时候，你不得不让不同的人来审核代码的不同部分。
 
 If you find an ideal reviewer but they are not available, you should at least CC
 them on your change.
+如果你发现最理想的代码审核人无法帮你审核，至少应该抄送给他（或者把他加到可选的审核者里去）。
 
-### In-Person Reviews {#in_person}
+### 面对面审核 {#in_person}
 
 If you pair-programmed a piece of code with somebody who was qualified to do a
 good code review on it, then that code is considered reviewed.
+如果你正在与一个人结对编程，他已经对你的代码做过细致地审核，那么这段代码可以认为是审核过的。
 
 You can also do in-person code reviews where the reviewer asks questions and the
 developer of the change speaks only when spoken to.
+你还可以与代码审核者进行面对面的审核。当审核者对代码有疑问时，向你提出问题，你进行回答。
 
 ## See Also {#seealso}
 
--   [How To Do A Code Review](reviewer/): A detailed guide for code reviewers.
--   [The CL Author's Guide](developer/): A detailed guide for developers whose
-    CLs are going through review.
+-   [怎样进行代码审核](reviewer/)：针对代码审核者的指南。
+-   [作者指南](developer/)：针对CL提交者的指南。
