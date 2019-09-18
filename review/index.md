@@ -1,13 +1,12 @@
 # 代码审核开发者指南
 
 ## 目录
- [TOC]
- @[TOC]
 -   **[介绍](#intro)**
--   **[What Do Code Reviewers Look For?](#look_for)**
-    -   **[Picking the Best Reviewers](#best_reviewers)**
-    -   **[In-Person Reviews](#in_person)**
--   **[See Also?](#seealso)**
+-   **[代码审核者应该看什么?](#look_for)**
+    -   **[挑选代码审核者](#best_reviewers)**
+    -   **[亲自审核](#in_person)**
+-   **[参考](#seealso)**
+
 
 
 ## 介绍 {#intro}
