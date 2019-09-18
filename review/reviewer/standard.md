@@ -63,10 +63,12 @@ Reviewers should _always_ feel free to leave comments expressing that something
 could be better, but if it's not very important, prefix it with something like
 "Nit: " to let the author know that it's just a point of polish that they could
 choose to ignore.
+我们应该形成这样一种氛围：当审核者发现某些事情可以有更好的方案时，他可以无拘束地提出来。如果这个更好的方案并不重要，可以在注释前加上：“Nit:”，让提交者明白，这段反馈只是锦上添花，你也可以选择忽略。
 
 Note: Nothing in this document justifies checking in CLs that definitely
 _worsen_ the overall code health of the system. The only time you would do that
 would be in an [emergency](../emergencies.md).
+注意：
 
 ## Mentoring
 
