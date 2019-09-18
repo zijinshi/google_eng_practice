@@ -1,6 +1,15 @@
-# Code Review Developer Guide
+# 代码审核开发者指南
 
-## Introduction {#intro}
+## 目录
+ [TOC]
+-   **[介绍](#intro)**
+-   **[What Do Code Reviewers Look For?](#look_for)**
+-   **[What Do Code Reviewers Look For?](#look_for)**
+-   **[What Do Code Reviewers Look For?](#look_for)**
+-   **[See Also?](#seealso)**
+
+
+## 介绍 {#intro}
 
 A code review is a process where someone other than the author(s) of a piece of
 code examines that code.
