@@ -1,23 +1,24 @@
 # 代码审核开发者指南
 
 ## 目录
--   **[介绍](#intro)**
--   **[代码审核者应该看什么?](#look_for)**
-    -   **[挑选代码审核者](#best_reviewers)**
-    -   **[亲自审核](#in_person)**
--   **[参考](#seealso)**
+-   [介绍](#intro)
+-   [代码审核者应该看什么?](#look_for)
+    -   [挑选代码审核者](#best_reviewers)
+    -   [亲自审核](#in_person)
+-   [参考](#seealso)
 
 
 
 ## 介绍 {#intro}
 
 A code review is a process where someone other than the author(s) of a piece of
-code examines that code.
+code examines that code.代码作者写完了一段代码，让其他人来检查这些代码，这个过程称为代码审核。
 
 At Google we use code review to maintain the quality of our code and products.
+在Google，我们通过代码审核来保证代码的质量，进而保证产品的质量。
 
 This documentation is the canonical description of Google's code review
-processes and policies.
+processes and policies.此文档是Google代码审核的规范说明流程和政策。
 
 
 
