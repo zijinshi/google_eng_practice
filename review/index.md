@@ -2,10 +2,11 @@
 
 ## 目录
  [TOC]
+ @[TOC]
 -   **[介绍](#intro)**
 -   **[What Do Code Reviewers Look For?](#look_for)**
--   **[What Do Code Reviewers Look For?](#look_for)**
--   **[What Do Code Reviewers Look For?](#look_for)**
+    -   **[Picking the Best Reviewers](#best_reviewers)**
+    -   **[In-Person Reviews](#in_person)**
 -   **[See Also?](#seealso)**
 
 
