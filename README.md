@@ -1,5 +1,3 @@
-本文英文原文来自： [https://github.com/google/eng-practices](https://github.com/google/eng-practices)。
-
 # Google的工程实践文档
 
 Google has many generalized engineering practices that cover all languages and
@@ -27,6 +25,9 @@ we clarify here for external readers:
     approving a CL.
 
 ## License
+本文英文原文来自： [https://github.com/google/eng-practices](https://github.com/google/eng-practices)，中文版由 [ zijinshi ](https://github.com/zijinshi) 翻译。
+
+中文版同时发布在网站 [星光灿烂](https://delphi.zijinshi.org)。
 
 The documents in this project are licensed under the CC-By 3.0 License, which
 encourages you to share these documents. See
