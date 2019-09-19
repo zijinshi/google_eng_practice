@@ -1,4 +1,4 @@
-# What to look for in a code review
+# 在代码审核过程中要看些什么？
 
 
 
