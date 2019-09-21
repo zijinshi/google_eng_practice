@@ -109,25 +109,31 @@ simpler. There are some exceptions (regular expressions and complex algorithms
 often benefit greatly from comments that explain what they're doing, for
 example) but mostly comments are for information that the code itself can't
 possibly contain, like the reasoning behind a decision.
+开发者是否使用英文写了清晰的注释？是否所有的注释都是必须的？通常当注释**解释为什么**这些代码应该存在时，它才是必须的，而不是解释这些代码做**什么**。如果代码逻辑不清晰，让人看不懂，那么应该重写，让它变得更简单。当然，也有例外（例如，正则表达式和复杂的算法通常需要注释来说明），但是大多数注释应该提供代码本身没有提供的信息，如这么做背后的原因是什么。
 
 It can also be helpful to look at comments that were there before this CL. Maybe
 there is a TODO that can be removed now, a comment advising against this change
 being made, etc.
+有时候也应该看一下这个CL之前的注释。例如，以前写的TODO，可能现在能删掉了；建议不要做改动的注释，但是这个CL里面却改了，也应该仔细分析下。
+
 
 Note that comments are different from *documentation* of classes, modules, or
 functions, which should instead express the purpose of a piece of code, how it
 should be used, and how it behaves when used.
+注意，注释与类、模块、功能的*文档*是不同的，这类文档应该描述这些代码的功能，怎样被调用，以及被调用时它的行为是什么。
 
 ## 样式
 
 We have [style guides](http://google.github.io/styleguide/) at Google for all
 of our major languages, and even for most of the minor languages. Make sure the
 CL follows the appropriate style guides.
+在Google，我们所有的主要编程语言都要遵循[样式指南](http://google.github.io/styleguide/)。确保CL遵守样式指南中的建议。
 
 If you want to improve some style point that isn't in the style guide, prefix
 your comment with "Nit:" to let the developer know that it's a nitpick that you
 think would improve the code but isn't mandatory. Don't block CLs from being
 submitted based only on personal style preferences.
+如果你发现某些样式在样式指南中并未包含，在注释中加上“Nit”，让开发者知道，这是一个小瑕疵，他可以依照你的建议去做，但这不是必须的。不要因为个人的样式偏好而导致CL延迟提交。
 
 The author of the CL should not include major style changes combined with other
 changes. It makes it hard to see what is being changed in the CL, makes merges
@@ -135,16 +141,17 @@ and rollbacks more complex, and causes other problems. For example, if the
 author wants to reformat the whole file, have them send you just the
 reformatting as one CL, and then send another CL with their functional changes
 after that.
+CL的作者在提交时，代码中不应包含较大的样式改变。因为这样很难比较出CL中有哪些改变，让代码合并、回滚变得更困难，容易产生问题。如果作者想重新格式化文件，应该把格式化作为一个单独CL先提交，之后再提交包含功能的CL。
 
-## Documentation
+## 文档
 
 If a CL changes how users build, test, interact with, or release code, check to
 see that it also updates associated documentation, including
 READMEs, g3doc pages, and any generated
 reference docs. If the CL deletes or deprecates code, consider whether the
 documentation should also be deleted.
-If documentation is
-missing, ask for it.
+If documentation is missing, ask for it.
+如果CL改变了编译、测试、交互、发布的方式，那么应检查下相关的问题是否也更新了，如README文件、g3doc页面，还有任何生成的参考文档。如果CL删除或弃用（deprecate）了一些代码，考虑是否也应该删除相应的文档。如果没有相关的问题，先找到它。
 
 ## 每行代码 {#every_line}
 
@@ -155,6 +162,7 @@ and assume that what's inside of it is okay. Obviously some code deserves more
 careful scrutiny than other code&mdash;that's a judgment call that you have to
 make&mdash;but you should at least be sure that you *understand* what all the
 code is doing.
+如果让你评审这些代码的话，仔细查看*每行*代码。有些文件，如数据文件、生成的代码或较大的数据结构，可以一扫而过。但是人写的代码，如类、功能或代码块不能一目十行，我们不应假设它就是正确的。显然有些代码应该尤其小心--这需要你自己权衡--至少你应该明白你*理解*这些代码在做什么。
 
 If it's too hard for you to read the code and this is slowing down the review,
 then you should let the developer know that
@@ -163,11 +171,13 @@ great software engineers, and you are one of them. If you can't understand the
 code, it's very likely that other developers won't either. So you're also
 helping future developers understand this code, when you ask the developer to
 clarify it.
+如果代码很难读懂，那就放慢审核速度，让开发这知道你没读懂，并让他解释与澄清代码，然后再审核。在Google，我们雇佣都是伟大的工程师，你是其中一员。如果你也不懂，很有可能其他工程师也不懂。实际上，这么做也是在帮助以后在这段代码基础上开发的工程师，让他们更容易理解代码。所以，让开发者解释清楚。
 
 If you understand the code but you don't feel qualified to do some part of the
 review, make sure there is a reviewer on the CL who is qualified, particularly
 for complex issues such as security, concurrency, accessibility,
 internationalization, etc.
+如果你理解这些代码，但是感觉自己没有资格审核这些代码，确保找到一个够资格的人来审核，尤其是比较复杂的问题，如安全、并发、可访问性、国际化等等。
 
 ## 上下文
 
@@ -177,6 +187,7 @@ being changed. Sometimes you have to look at the whole file to be sure that the
 change actually makes sense. For example, you might see only four new lines
 being added, but when you look at the whole file, you see those four lines are
 in a 50-line method that now really needs to be broken up into smaller methods.
+把这个CL放到一个更广阔的上下文中来看通常很有用。审核工具中，我们往往只能看到开发者修改的那部分代码。有时候从整个文件的角度来读代码才有意义。例如，有时候你只看到添加了几行代码，但从整个文件来看，你发现这4行代码在添加到了一个50行的方法中，因此需要把它拆分成更小的方法。
 
 It's also useful to think about the CL in the context of the system as a whole.
 Is this CL improving the code health of the system or is it making the whole
@@ -184,6 +195,7 @@ system more complex, less tested, etc.? **Don't accept CLs that degrade the code
 health of the system.** Most systems become complex through many small changes
 that add up, so it's important to prevent even small complexities in new
 changes.
+把这个CL放到这个系统的上下文中来考虑这个CL也很有用。这个CL能够提升整个系统的代码健康状况，还是让系统变得更复杂、更难测试？**不要接受恶化系统的健康状况的代码。** 大多数系统系统变得很复杂都是由每个微小的复杂累积而成的，在提交每个CL时都应避免让代码变得复杂。
 
 ## 好的东西 {#good_things}
 
@@ -192,20 +204,21 @@ addressed one of your comments in a great way. Code reviews often just focus on
 mistakes, but they should offer encouragement and appreciation for good
 practices, as well. It’s sometimes even more valuable, in terms of mentoring, to
 tell a developer what they did right than to tell them what they did wrong.
+如果在CL中看到一些比较好的方面，告诉开发者，尤其是当他解释你对他的代码的评论的时候。审核者往往只关注代码中的错误，他们也应该对开发者的一些好的实践表示鼓励和感谢。有时候，告诉开发者他们在那些方面做得很好，比告诉他们在哪些方面做得不足更有价值。
 
 ## 总结
 
 In doing a code review, you should make sure that:
-
--   The code is well-designed.
--   The functionality is good for the users of the code.
--   Any UI changes are sensible and look good.
--   Any parallel programming is done safely.
--   The code isn't more complex than it needs to be.
+在进行代码评审时，你应该确保如下几点：
+-   The code is well-designed. 代码是否涉及良好。
+-   The functionality is good for the users of the code. 功能是否对代码的用户有用。
+-   Any UI changes are sensible and look good.所有的UI改变都是明智的，看起来很不错。
+-   Any parallel programming is done safely.所有的并行计算都很安全。
+-   The code isn't more complex than it needs to be. 代码尽量简单。
 -   The developer isn't implementing things they *might* need in the future but
-    don't know they need now.
--   Code has appropriate unit tests.
--   Tests are well-designed.
+    don't know they need now. 开发这没有实现现在不需要，但是他们认为将来*可能*会用到的功能。
+-   Code has appropriate unit tests.代码有合适的单元测试。
+-   Tests are well-designed. 单元测试涉及良好。
 -   The developer used clear names for everything.
 -   Comments are clear and useful, and mostly explain *why* instead of *what*.
 -   Code is appropriately documented (generally in g3doc).
