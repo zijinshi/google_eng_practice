@@ -197,7 +197,7 @@ that add up, so it's important to prevent even small complexities in new
 changes.
 把这个CL放到这个系统的上下文中来考虑这个CL也很有用。这个CL能够提升整个系统的代码健康状况，还是让系统变得更复杂、更难测试？**不要接受恶化系统的健康状况的代码。** 大多数系统系统变得很复杂都是由每个微小的复杂累积而成的，在提交每个CL时都应避免让代码变得复杂。
 
-## 好的东西 {#good_things}
+## 好事 {#good_things}
 
 If you see something nice in the CL, tell the developer, especially when they
 addressed one of your comments in a great way. Code reviews often just focus on
@@ -219,14 +219,15 @@ In doing a code review, you should make sure that:
     don't know they need now. 开发这没有实现现在不需要，但是他们认为将来*可能*会用到的功能。
 -   Code has appropriate unit tests.代码有合适的单元测试。
 -   Tests are well-designed. 单元测试涉及良好。
--   The developer used clear names for everything.
--   Comments are clear and useful, and mostly explain *why* instead of *what*.
--   Code is appropriately documented (generally in g3doc).
--   The code conforms to our style guides.
+-   The developer used clear names for everything. 开发者是否使用了清晰的命名。
+-   Comments are clear and useful, and mostly explain *why* instead of *what*. 注释是否清晰、有用，大多数应该解释*为什么*，而不是“什么”。
+-   Code is appropriately documented (generally in g3doc).代码是否包含合适的文档（通常是g3doc）。
+-   The code conforms to our style guides. 代码是否遵循样式指南。
 
 Make sure to review **every line** of code you've been asked to review, look at
 the **context**, make sure you're **improving code health**, and compliment
 developers on **good things** that they do.
+确保审核了**每行代码**，要查看上下文，确保你**正在提升代码质量**，当开发者做了**好事**时，称赞他们。
 
 Next: [Navigating a CL in Review](navigate.md)
 下一章：[代码审核的步骤](navigate.md)
