@@ -1,19 +1,20 @@
-# Navigating a CL in review
+# 代码审核的步骤
 
 
 
-## Summary
+## 概要
 
 Now that you know [what to look for](looking-for.md), what's the most efficient
 way to manage a review that's spread across multiple files?
+现在，你已经知道[在代码审核过程中要看些什么？](looking-for.md)，那么对于CL包含多个文件的CL，怎样做会让代码审核变得高效呢？
 
 1.  Does the change make sense? Does it have a good
-    [description](../developer/cl-descriptions.md)?
+    [description](../developer/cl-descriptions.md)? 这个CL是否有意义？它是否包含好的[描述](../developer/cl-descriptions.md)？
 2.  Look at the most important part of the change first. Is it well-designed
-    overall?
-3.  Look at the rest of the CL in an appropriate sequence.
+    overall先综观整个CL中最重要的部分。整体上，是否设计合理？
+3.  Look at the rest of the CL in an appropriate sequence.以合适的顺序检查CL的其他部分。
 
-## Step One: Take a broad view of the change {#step_one}
+## 第一步：全面了解CL {#step_one}
 
 Look at the [CL description](../developer/cl-descriptions.md) and what the CL
 does in general. Does this change even make sense? If this change shouldn't have
