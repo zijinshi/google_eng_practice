@@ -51,27 +51,31 @@ smaller parts of the CL, and generally accelerates doing the code review. If the
 CL is too large for you to figure out which parts are the major parts, ask the
 developer what you should look at first, or ask them to
 [split up the CL into multiple CLs](../developer/small-cls.md).
+找到包含 CL “主要”部分的文件。通常，如果一个文件包含大量的逻辑修改，那么它就是 CL 的主要部分。先审视这些主要部分，这将有助于为其他非主要部分给出上下文。如果 CL 太大，很难找出主要部分的位置，可以征询开发者的建议，你应该先看哪些部分，并建议他[把一个 CL 拆分成多个](../developer/small-cls.md)。
 
 If you see some major design problems with this part of the CL, you should send
 those comments immediately, even if you don't have time to review the rest of
 the CL right now. In fact, reviewing the rest of the CL might be a waste of
 time, because if the design problems are significant enough, a lot of the other
 code under review is going to disappear and not matter anyway.
+如果发现 CL 中有一些重要的设计问题，立即给出反馈，即使现在还没来得及审核其他部分。实际上，审核其他部分可能不过是浪费时间，主要这个设计问题足够大，在重新设计时，其他很多代码很有可能会消失或无关紧要了。
 
 There are two major reasons it's so important to send these major design
 comments out immediately:
+为什么要立即对这重要设计问题给出反馈呢？有两个原因：
 
 -   Developers often mail a CL and then immediately start new work based on that
     CL while they wait for review. If there are major design problems in the CL
     you're reviewing, they're also going to have to re-work their later CL. You
     want to catch them before they've done too much extra work on top of the
-    problematic design.
+    problematic design. 开发者经常在发出 CL 之后就立即基于这个 CL 开始新的工作。如果你发现正在审核的 CL 有重要设计问题，那么他正在做的新 CL 还得返工。我们应该及时指出，避免开发者在基于错误的设计下做了太多工作。
+    
 -   Major design changes take longer to do than small changes. Developers nearly
     all have deadlines; in order to make those deadlines and still have quality
     code in the codebase, the developer needs to start on any major re-work of
-    the CL as soon as possible.
+    the CL as soon as possible. 重要设计错误比小的改变耗费更多的时间。每个开发者在开发时都有最后期限；为了在不延期的前提下保证代码质量，开发者需要尽快重新设计 CL。
 
-## Step Three: Look through the rest of the CL in an appropriate sequence {#step_three}
+## 第三步：以合适的顺序审视 CL 的其他部分{#step_three}
 
 Once you've confirmed there are no major design problems with the CL as a whole,
 try to figure out a logical sequence to look through the files while also making
@@ -80,5 +84,7 @@ major files, it's simplest to just go through each file in the order that
 the code review tool presents them to you. Sometimes it's also helpful to read the tests
 first before you read the main code, because then you have an idea of what the
 change is supposed to be doing.
+在确认 CL 没有重要设计问题之后，整理出审视文件的顺序，并确保不会遗漏任何人文件。通常，在审视了主要文件之后，最简单的方式就是按照代码审核工具呈现出来的顺序遍历每个文件。有时候，先阅读测试代码更有帮助，因为看了测试代码之后，你就明白这个 CL 的期望行为是什么。
 
 Next: [Speed of Code Reviews](speed.md)
+下一章：[审核代码的速度](speed.md)
