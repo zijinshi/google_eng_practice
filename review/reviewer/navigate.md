@@ -21,24 +21,28 @@ does in general. Does this change even make sense? If this change shouldn't have
 happened in the first place, please respond immediately with an explanation of
 why the change should not be happening. When you reject a change like this, it's
 also a good idea to suggest to the developer what they should have done instead.
+阅读[CL 描述](../developer/cl-descriptions.md)，了解CL是实现的功能。判断这个修改是否有意义？如果答案是“否”，请立即回复，并解释为什么要取消这个修改。当拒绝的同时，你最好向开发者给出建议，这种情况应该怎么做。
 
 For example, you might say "Looks like you put some good work into this, thanks!
 However, we're actually going in the direction of removing the FooWidget system
 that you're modifying here, and so we don't want to make any new modifications
 to it right now. How about instead you refactor our new BarWidget class?"
+例如，你可能会这么说，“这个CL的工作看起来挺不错的，谢谢你！不过，目前我们正在删除 FooWidget 系统，目前最好不要修改它，不过这个CL正在修改它。换种方式吧，你看重构一下 BarWdidget 的类，怎么样？”
 
 Note that not only did the reviewer reject the current CL and provide an
 alternative suggestion, but they did it *courteously*. This kind of courtesy is
 important because we want to show that we respect each other as developers even
 when we disagree.
+从上面的例子来看，你拒绝了这个 CL ，并提供了一种可选方案。整个过程，你都*很有礼貌*。这种礼貌非常重要，这向大家展示了：尽管不同意你的观点，但我们彼此都很尊重。
 
 If you get more than a few CLs that represent changes you don't want to make,
 you should consider re-working your team's development process or the posted
 process for external contributors so that there is more communication before CLs
 are written. It's better to tell people "no" before they've done a ton of work
 that now has to be thrown away or drastically re-written.
+如果这种情况（开发者提交了你认为不应该这么做的 CL）经常出现，那么你应该考虑一下，是不是应该优化团队的开发流程或外部贡献者（针对某些与外部开发人员共同协作的场景）的发布流程，以便先与开发者进行充分的沟通，然后再开发 CL。最好在他开发一大堆工作之前就说“不”，以避免大量不必要的返工。
 
-## Step Two: Examine the main parts of the CL {#step_two}
+## 第二步：检查CL的主要部分 {#step_two}
 
 Find the file or files that are the "main" part of this CL. Often, there is one
 file that has the largest number of logical changes, and it's the major piece of
