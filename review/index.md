@@ -71,7 +71,7 @@ good code review on it, then that code is considered reviewed.
 
 You can also do in-person code reviews where the reviewer asks questions and the
 developer of the change speaks only when spoken to.
-你还可以与代码审核者进行面对面的审核。当审核者对代码有疑问时，向你提出问题，你进行回答。
+你还可以与代码审核者进行面对面的审核。当审核者对代码有疑问时，向开发者提问，开发者回答。
 
 ## See Also {#seealso}
 
