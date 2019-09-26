@@ -1,28 +1,30 @@
-# Handling pushback in code reviews
-
+# 代码评论被拒绝时，应如何处理？
 
 
 Sometimes a developer will push back on a code review. Either they will disagree
 with your suggestion or they will complain that you are being too strict in
 general.
+有时候，面对审核者的评论，开发者可能会拒绝。有可能他们不同意你的建议，或者他们认为你太过于苛刻了。
 
-## Who is right? {#who_is_right}
+## 谁是对的? {#who_is_right}
 
 When a developer disagrees with your suggestion, first take a moment to consider
 if they are correct. Often, they are closer to the code than you are, and so
 they might really have a better insight about certain aspects of it. Does their
 argument make sense? Does it make sense from a code health perspective? If so,
-let them know that they are right and let the issue drop.
+let them know that they are right and let the issue drop.当开发者不同意的建议时，先花点时间考虑一下他们是否正确。开发者往往更接近代码，在某些方面他们对代码有更好的见解。他们的论点是否理由充分？站在代码健康的角度，是否应该如此？如果回答“是”，告诉他们，他们是对的，可以忽略这条评论。
 
 However, developers are not always right. In this case the reviewer should
 further explain why they believe that their suggestion is correct. A good
 explanation demonstrates both an understanding of the developer's reply, and
 additional information about why the change is being requested.
+但开发者并非总是对的。这种情况，代码审核者应该进一步解释为何他相信自己的建议是正确的。一个很好地解释通常包含两部分：对开发人员的回复的解释和进一步说明这么改的必要性。
 
 In particular, when the reviewer believes their suggestion will improve code
 health, they should continue to advocate for the change, if they believe the
 resulting code quality improvement justifies the additional work requested.
 **Improving code health tends to happen in small steps.**
+
 
 Sometimes it takes a few rounds of explaining a suggestion before it really
 sinks in. Just make sure to always stay [polite](comments.md#courtesy) and let
