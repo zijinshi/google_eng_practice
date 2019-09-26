@@ -138,7 +138,7 @@ take some sort of further action quickly, without sacrificing code health to do
 so.
 如果一个 CL *不能* 拆分成多个，并且你很难在短时间内审核代码，至少在CL的整体设计上向开发者提出反馈，以便让开发者改进。作为一个审核者，你的目标之一是：尽量不要阻塞开发者，让他能迅速采取下一步行动。当然，前提是不会降低代码质量。
 
-## Code Review Improvements Over Time {#time}
+## 代码审核在不断改善中 {#time}
 
 If you follow these guidelines and you are strict with your code reviews, you
 should find that the entire code review process tends to go faster and faster
@@ -146,10 +146,13 @@ over time. Developers learn what is required for healthy code, and send you CLs
 that are great from the start, requiring less and less review time. Reviewers
 learn to respond quickly and not add unnecessary latency into the review
 process.
+在遵循本文中的建议进行代码审核之后，尽管代码审核很严格，你会发现，随着时间的推移，整个流程走下来会越来越快。开发者学会了健康的代码需要什么，在发送 CL 之前会尽量保证代码质量，因此需要审核的时间会越来越短。审核者学会了快速响应，不会在审核中增加不必要的延时。
+
 But **don't compromise on
 the [code review standards](standard.md) or quality for an imagined improvement
 in velocity**&mdash;it's not actually going to make anything happen more
 quickly, in the long run.
+但是 **不要为了想象中的速度提升，在[代码审核标准](standard.md)或质量上妥协**  ————实际上，从长期来，这样做并不会节省时间。
 
 ## 紧急情况
 
@@ -158,6 +161,7 @@ _whole_ review process very quickly, and where the quality guidelines would be
 relaxed. However, please see [What Is An Emergency?](../emergencies.md#what) for
 a description of which situations actually qualify as emergencies and which
 don't.
+当然，也会有[紧急情况](../emergencies.md)，要求审核流程尽快完成，此时质量向导也有适当的弹性空间。但是，请先查看一下[什么是紧急情况](../emergencies.md#what)，这篇文章详细讲述了那些情况属于紧急情况，哪些不是。
 
 Next: [How to Write Code Review Comments](comments.md)
 下一章: [怎样写代码审核反馈](comments.md)
