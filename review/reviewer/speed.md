@@ -152,7 +152,7 @@ But **don't compromise on
 the [code review standards](standard.md) or quality for an imagined improvement
 in velocity**&mdash;it's not actually going to make anything happen more
 quickly, in the long run.
-但是 **不要为了想象中的速度提升，在[代码审核标准](standard.md)或质量上妥协**  ————实际上，从长期来，这样做并不会节省时间。
+但是 **不要为了想象中的速度提升，在[代码审核标准](standard.md)或质量上妥协**  ——实际上，从长期来，这样做并不会节省时间。
 
 ## 紧急情况
 
