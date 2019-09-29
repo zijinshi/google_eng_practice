@@ -56,7 +56,7 @@ Other similarly bad descriptions include:
 “修复 bug”是一个很不恰当的描述。哪个 bug ？你做了哪些事情来修复它？通通都没有。类似糟糕的描述还包括：
 
 -   "Fix build." “修复编译。”
--   "Add patch." “增加补丁”
+-   "Add patch." “增加补丁。”
 -   "Moving code from A to B." “把代码从 A 移到 B。”
 -   "Phase 1." “第一阶段。”
 -   "Add convenience functions."  “增加方便的功能。”
@@ -73,20 +73,27 @@ Here are some examples of good descriptions.这是几个良好描述的样例。
 
 ### Functionality change 功能修改
 
-> rpc: remove size limit on RPC server message freelist. RPC：
+> rpc: remove size limit on RPC server message freelist.
 >
 > Servers like FizzBuzz have very large messages and would benefit from reuse.
 > Make the freelist larger, and add a goroutine that frees the freelist entries
 > slowly over time, so that idle servers eventually release all freelist
 > entries.
 
+> RPC：移除 RPC 服务器的消息空闲列表的大小限制。
+> 
+> 服务器（如 FizzBuzz）有大量的消息，可以从重用中受益。使空闲列表更大，并添加一个goroutine，以便随着时间的推移缓慢释放空闲列表，以便空闲
+> 服务器最终释放所有空闲列表。
+
 The first few words describe what the CL actually does. The rest of the
 description talks about the problem being solved, why this is a good solution,
 and a bit more information about the specific implementation.
+前面几句话描述了 CL 做什么的，接下来描述解决了什么问题，为什么这是一个好的解决方案，最后涉及到了一些实现细节。
 
 ### Refactoring 重构
 
 > Construct a Task with a TimeKeeper to use its TimeStr and Now methods.
+> 构建一个带 TimeKeeper 的 Task，以便使用它的 TimeStr 和 Now 方法。
 >
 > Add a Now method to Task, so the borglet() getter method can be removed (which
 > was only used by OOMCandidate to call borglet's Now method). This replaces the
