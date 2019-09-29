@@ -75,17 +75,19 @@ If you previously had fairly lax code reviews and you switch to having strict
 reviews, some developers will complain very loudly. Improving the
 [speed](speed.md) of your code reviews usually causes these complaints to fade
 away.
-如果你
+如果以前你在做代码评审时比较宽松，现在突然变得严格起来，有些开发者可能会抱怨。没关系，通过提升审核代码的[速度](speed.md)通常会让抱怨消失。
 
 Sometimes it can take months for these complaints to fade away, but eventually
 developers tend to see the value of strict code reviews as they see what great
 code they help generate. Sometimes the loudest protesters even become your
 strongest supporters once something happens that causes them to really see the
 value you're adding by being strict.
+有时候，让抱怨消失的过程比较漫长，长达数月，但最后，开发者会往往趋于赞同严格审核代码的价值，因为在严格审核的帮助下，他们写出了伟大的代码。一旦大家看到了这种严格带来的价值，甚至最强烈的抗议者可能会变成最强大的拥护者。
 
-## Resolving Conflicts {#conflicts}
+## 冲突解决 {#conflicts}
 
 If you are following all of the above but you still encounter a conflict between
 yourself and a developer that can't be resolved, see
 [The Standard of Code Review](standard.md) for guidelines and principles that
 can help resolve the conflict.
+作为审核者，如果你已经遵循本文中提到的所有规则，但仍旧与开发者之前产生了难以解决的冲突，可以参考[代码审核的标准](standard.md) ，以其中提到的规则与理论来指导解决冲突。
