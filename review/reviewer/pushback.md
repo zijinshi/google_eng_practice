@@ -44,7 +44,7 @@ just in the reviewer's mind. Upsets are usually more about
 insistence on code quality.
 审核者相信，有时候如果自己坚持应该改进，那么开发者可能会心烦。这种事的确偶有发生，但通常持续时间很短，稍后他们会感谢审核者，正是他的坚持让代码质量得以提升。通常，如果在评论中保持[礼貌](comments.md#courtesy)，开发者根本就不会烦躁，审核者不必担忧。烦躁大多是因为[写评论的方式](comments.md#courtesy)没有把焦点放在代码质量上。
 
-## 稍后再整理 {#later}
+## 稍后再清理 {#later}
 
 A common source of push back is that developers (understandably) want to get
 things done. They don't want to go through another round of review just to get
@@ -59,7 +59,7 @@ and the cleanup gets lost or forgotten in the press of other work. Thus, it is
 usually best to insist that the developer clean up their CL *now*, before the
 code is in the codebase and "done." Letting people "clean things up later" is a
 common way for codebases to degenerate.
-一种常见的拒绝原因是：开发者（可以理解得）想尽快完成它。他们不想再进行一轮审核，只想快点把 CL 提交到代码库。所以，他们说他们会在稍后的 CL 中再整理代码，这样你应该对 *当前* CL 评论 LGTM了。有些开发者的确是这么做的，他们随后的确创建了一个新的 CL，用于修复当问题。然而，经验告诉我们，
+一种常见的拒绝原因是：开发者（可以理解得）想尽快完成它。他们不想再进行一轮审核，只想快点把 CL 提交到代码库。所以，他们说他们会在稍后的 CL 中再清理代码，这样你应该对 *当前* CL 评论 LGTM了。有些开发者的确是这么做的，他们随后的确创建了一个新的 CL，用于修复当问题。然而，经验告诉我们，从开发者提交了原始 CL 之后，时间过得越久，他们清理代码的可能性越小。事实上，除非开发者在当前 CL 之后 *立即* 清理代码，否则以后也不会清理。这并不是说开发者不靠谱，而是因为他们有太多的开发工作要做，迫于其他工作的压力已经忘了清理之前提交的代码这件事。因此，我们建议，最好坚持让开发者 *现在* 就开始清理代码，而不是提交到代码库 *之后* 。 我们应该有种理念， 代码退化的常见原因有几个，“稍后再清理” 就是其中之一。
 
 If a CL introduces new complexity, it must be cleaned up before submission
 unless it is an [emergency](../emergencies.md). If the CL exposes surrounding
@@ -67,13 +67,15 @@ problems and they can't be addressed right now, the developer should file a bug
 for the cleanup and assign it to themselves so that it doesn't get lost. They
 can optionally also write a TODO comment in the code that references the filed
 bug.
+如果 CL 让代码变得复杂，那么它必须在提交之前清理完毕，除非是[紧急情况](../emergencies.md)。如果 CL 满是问题却不立即解决，开发者应该给自己发一个清理代码相关的bug，把它分配给自己，以避免遗忘。除此之外，在代码中加上 TODO 注释和相关的 bug 编码。
 
-## General Complaints About Strictness {#strictness}
+## 与严格相关的常见抱怨 {#strictness}
 
 If you previously had fairly lax code reviews and you switch to having strict
 reviews, some developers will complain very loudly. Improving the
 [speed](speed.md) of your code reviews usually causes these complaints to fade
 away.
+如果你
 
 Sometimes it can take months for these complaints to fade away, but eventually
 developers tend to see the value of strict code reviews as they see what great
