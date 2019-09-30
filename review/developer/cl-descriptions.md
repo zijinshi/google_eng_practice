@@ -82,7 +82,7 @@ Here are some examples of good descriptions.这是几个良好描述的样例。
 
 > RPC：移除 RPC 服务器的消息空闲列表的大小限制。
 > 
-> 服务器（如 FizzBuzz）有大量的消息，可以从重用中受益。使空闲列表更大，并添加一个goroutine，以便随着时间的推移缓慢释放空闲列表，以便空闲
+> 服务器（如 FizzBuzz）有大量的消息，可以从重用中受益。使空闲列表更大，并添加一个goroutine，随着时间的推移缓慢释放空闲列表，以便空闲
 > 服务器最终释放所有空闲列表。
 
 The first few words describe what the CL actually does. The rest of the
@@ -98,37 +98,50 @@ and a bit more information about the specific implementation.
 > Add a Now method to Task, so the borglet() getter method can be removed (which
 > was only used by OOMCandidate to call borglet's Now method). This replaces the
 > methods on Borglet that delegate to a TimeKeeper.
+> 在 Task 中增加一个 Now 方法，然后删掉 borglet() 方法（这个方法仅仅被 OOMCandidate 使用，它调用了 borglet 的 Now 方法）。这样就替换掉
+> Borglet的方法，把它委托给 TimeKeeper。
 >
 > Allowing Tasks to supply Now is a step toward eliminating the dependency on
 > Borglet. Eventually, collaborators that depend on getting Now from the Task
 > should be changed to use a TimeKeeper directly, but this has been an
 > accommodation to refactoring in small steps.
+> 让 Tasks 提供 Now 是减少对 Borglet 的依赖所做的一小步。最终，从 Task 上面调用 Now 的方式会替代成直接调用 TimeKeeper，我们会逐步实现。
+>
 >
 > Continuing the long-range goal of refactoring the Borglet Hierarchy.
+> 继续重构 Borglet 层次的长期目标。
 
 The first line describes what the CL does and how this is a change from the
 past. The rest of the description talks about the specific implementation, the
 context of the CL, that the solution isn't ideal, and possible future direction.
 It also explains *why* this change is being made.
+第一行描述了 CL 做什么的，以及过去它是怎么改变的。描述的其他部分谈到了具体实现，CL 的上下文，这种方法并不完美，但在朝着完美的方向前进。而且也解释了 *为什么* 应该这么改。
 
-### Small CL that needs some context
+### Small CL that needs some context 需要一些上下文的小 CL
 
-> Create a Python3 build rule for status.py.
+> Create a Python3 build rule for status.py. 为 status.py 创建一个 Python3 的编译。
 >
 > This allows consumers who are already using this as in Python3 to depend on a
 > rule that is next to the original status build rule instead of somewhere in
 > their own tree. It encourages new consumers to use Python3 if they can,
 > instead of Python2, and significantly simplifies some automated build file
 > refactoring tools being worked on currently.
+>
+> 
+>
+>
 
 The first sentence describes what's actually being done. The rest of the
 description explains *why* the change is being made and gives the reviewer a lot
 of context.
+第一句话描述做了什么，其他部分解释 *为什么* 要这么修改，并向审核者提供了不少额外的上下文信息。
 
-## Review the description before submitting the CL
+## Review the description before submitting the CL 在提交 CL 之前评审描述
 
 CLs can undergo significant change during review. It can be worthwhile to review
 a CL description before submitting the CL, to ensure that the description still
 reflects what the CL does.
+在审核期间，CL 可能会发生重大改变。在提交 CL 之前有必要再审视一遍 CL 描述，确保描述能够正确地反映 CL 做了什么。
 
 Next: [Small CLs](small-cls.md)
+下一章: [小 CL](small-cls.md)
