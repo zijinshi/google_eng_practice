@@ -127,7 +127,7 @@ It also explains *why* this change is being made.
 > instead of Python2, and significantly simplifies some automated build file
 > refactoring tools being worked on currently.
 >
-> 
+> 在原始的编译（Python2）旁创建一个Python3的编译，让已经使用过Python3编译的用户根据某些规则选择Python3还是Python2，而不是依赖于树中的某个位置。 它鼓励新用户尽可能使用Python3而不是Python2，并大大简化了当前正在使用的某些自动编译文件重构工具。
 >
 >
 
