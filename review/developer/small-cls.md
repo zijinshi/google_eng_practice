@@ -1,36 +1,43 @@
-# Small CLs
+# 小 CL
 
 
 
-## Why Write Small CLs? {#why}
+## 为什么应该写小CL{#why}
 
-Small, simple CLs are:
+小 CL 有如下优点：
 
 -   **Reviewed more quickly.** It's easier for a reviewer to find five minutes
     several times to review small CLs than to set aside a 30 minute block to
-    review one large CL.
+    review one large CL. **审核更快。**  相对让审核者单独拿出30分钟审核大 CL，不如让他花费几个5分钟审核代码。对审核者而言，后者更容易。
 -   **Reviewed more thoroughly.** With large changes, reviewers and authors tend
     to get frustrated by large volumes of detailed commentary shifting back and
     forth—sometimes to the point where important points get missed or dropped.
+    **审核更彻底。** 发生较大修改时，往往会反复审核、修改，审核者与开发者经常会因为过多的反复而在情绪上受到影响，以致于把精力放在修改上了，却忽略了 CL 中更重要的部分。    
 -   **Less likely to introduce bugs.** Since you're making fewer changes, it's
     easier for you and your reviewer to reason effectively about the impact of
     the CL and see if a bug has been introduced.
+    **引入新缺陷的可能性更小。** 
 -   **Less wasted work if they are rejected.** If you write a huge CL and then
     your reviewer says that the overall direction is wrong, you've wasted a lot
     of work.
+    **如果被拒绝，浪费的时间更少。**
 -   **Easier to merge.** Working on a large CL takes a long time, so you will
     have lots of conflicts when you merge, and you will have to merge
     frequently.
+    **更容易合并代码。**
 -   **Easier to design well.** It's a lot easier to polish the design and code
     health of a small change than it is to refine all the details of a large
     change.
+    **更易于设计。**
 -   **Less blocking on reviews.** Sending self-contained portions of your
     overall change allows you to continue coding while you wait for your current
     CL in review.
+    **减少阻塞审核的可能性。**
 -   **Simpler to roll back.** A large CL will more likely touch files that get
     updated between the initial CL submission and a rollback CL, complicating
     the rollback (the intermediate CLs will probably need to be rolled back
     too).
+    **更容易回退。**
 
 Note that **reviewers have discretion to reject your change outright for the
 sole reason of it being too large.** Usually they will thank you for your
@@ -39,7 +46,7 @@ changes. It can be a lot of work to split up a change after you've already
 written it, or require lots of time arguing about why the reviewer should accept
 your large change. It's easier to just write small CLs in the first place.
 
-## What is Small? {#what_is_small}
+## 如何定义“小”？ {#what_is_small}
 
 In general, the right size for a CL is **one self-contained change**. This means
 that:
@@ -71,7 +78,7 @@ seems like an acceptably-sized CL to you might be overwhelming to your reviewer.
 When in doubt, write CLs that are smaller than you think you need to write.
 Reviewers rarely complain about getting CLs that are too small.
 
-## When are Large CLs Okay? {#large_okay}
+## 什么时候可以有大 CL ？ {#large_okay}
 
 There are a few situations in which large changes aren't as bad:
 
@@ -124,7 +131,7 @@ similar to the [refactorings guidelines](#refactoring). That includes:
 *   refactoring the test code (e.g. introduce helper functions).
 *   introducing larger test framework code (e.g. an integration test).
 
-## Don't Break the Build {#break}
+## 不要破坏编译 {#break}
 
 If you have several CLs that depend on each other, you need to find a way to
 make sure the whole system keeps working after each CL is submitted. Otherwise
