@@ -1,12 +1,13 @@
-# How to handle reviewer comments
+# 如何处理审核评论
 
 
 
 When you've sent a CL out for review, it's likely that your reviewer will
 respond with several comments on your CL. Here are some useful things to know
 about handling reviewer comments.
+在发出 CL 之后，一般会收到审核者的评论。下面我们就来详细描述如何处理这些评论。
 
-## Don't Take it Personally {#personal}
+## 不要情绪化 {#personal}
 
 The goal of review is to maintain the quality of our codebase and our products.
 When a reviewer provides a critique of your code, think of it as their attempt
@@ -34,7 +35,7 @@ the intended effect, then
 escalate to your manager as
 appropriate.
 
-## Fix the Code {#code}
+## 修复代码 {#code}
 
 If a reviewer says that they don't understand something in your code, your first
 response should be to clarify the code itself. If the code can't be clarified,
@@ -47,7 +48,7 @@ future readers of the code won't understand either. Writing a response in the
 code review tool doesn't help future code readers, but clarifying your code or
 adding code comments does help them.
 
-## Think for Yourself {#think}
+## 为自己考虑 {#think}
 
 Writing a CL can take a lot of work. It's often really satisfying to finally
 send one out for review, feel like it's done, and be pretty sure that no further
@@ -70,9 +71,10 @@ might actually know something about the users, codebase, or CL that the reviewer
 doesn't know. So fill them in; give them more context. Usually you can come to
 some consensus between yourself and the reviewer based on technical facts.
 
-## Resolving Conflicts {#conflicts}
+## 解决冲突 {#conflicts}
 
 Your first step in resolving conflicts should always be to try to come to
 consensus with your reviewer. If you can't achieve consensus, see
 [The Standard of Code Review](../reviewer/standard.md), which gives principles
 to follow in such a situation.
+在解决冲突的第一步，永远都是应该先尝试与审核者达成共识。如果无法达成共识，可以参考[审核代码标准](../reviewer/standard.md)，当面临这种情形时，它为我们提供了一些准则。
