@@ -7,6 +7,6 @@
 -   [代码审核的步骤 （Navigating a CL in Review）](navigate.md)
 -   [代码审核的速度 （Speed of Code Reviews）](speed.md)
 -   [怎样写代码审核的评论？ （How to Write Code Review Comments）](comments.md)
--   [如何应对被拒绝的代码评论？ （Handling Pushback in Code Reviews）](pushback.md)
+-   [代码评论被拒绝时，应如何处理？ （Handling Pushback in Code Reviews）](pushback.md)
 
 本文档是针对代码审核者的指南，至于代码提交者，可以参见这篇文档： [代码提交者指南 （CL Author's Guide）](../developer/)。
