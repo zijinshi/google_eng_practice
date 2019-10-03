@@ -13,7 +13,7 @@ Google有很多优秀的工程实践，它几乎覆盖了所有的编程语言�
 
 *   **CL**： 即“changelist”， 中文可以翻译成修改列表，它是提交到版本控制工具中的一次代码修改，或即将审核的代码。有的公司或组织称它为 “改变”(change)或“补丁”(patch)。
 *   **LGTM**： 是 “Looks Good to Me.” 的缩写，“看起来不错”。 当一个审核者这么说的时候，意味着他会批准这个CL。
-*   **g3doc**: Google内部的工程文档平台。
+*   **g3doc**： Google内部的工程文档平台。
 
 ## License
 本文遵守 CC-By 3.0 License。英文原文来自 [https://github.com/google/eng-practices](https://github.com/google/eng-practices)，中文版由 [ zijinshi ](https://github.com/zijinshi) 翻译整理。根据中文表达习惯，在原文基础上有少量删改。
