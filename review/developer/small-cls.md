@@ -121,37 +121,42 @@ another CL for changes to the code that uses that proto. You have to submit the
 proto CL before the code CL, but they can both be reviewed simultaneously. If
 you do this, you might want to inform both sets of reviewers about the other CL
 that you wrote, so that they have context for your changes.
-例如：
+例如：你提交了一个 CL，这个 CL 修改了协议缓冲区，而且另外一个 CL 用到它。因此我们先提交第一个 CL，再提交第二个 CL，并让两个 CL 同时审核。如果这么做的话，你就得分别向两个 CL 的审核者告知另外一个 CL 的内容，以便他们知道上下文。
 
 Another example: you send one CL for a code change and another for the
 configuration or experiment that uses that code; this is easier to roll back
 too, if necessary, as configuration/experiment files are sometimes pushed to
 production faster than code changes.
+以代码和配置文件进行拆分。例如，你提交了2个 CL：其中一个 CL 修改了一段代码，另外一个 CL 调用了这段代码或代码的相关配置；当需要代码回滚时，这也比较容易，因为配置或调用文件有时候推送到产品比代码修改相对容易。
 
-## Separate Out Refactorings {#refactoring}
+## 单独重构 {#refactoring}
 
 It's usually best to do refactorings in a separate CL from feature changes or
 bug fixes. For example, moving and renaming a class should be in a different CL
 from fixing a bug in that class. It is much easier for reviewers to understand
 the changes introduced by each CL when they are separate.
+在修改功能或修复缺陷的 CL 中，不建议把重构也加进来，而是建议把它放到单独的 CL 中。例如，修改类名或把某个类移到其他包内是一个 CL，修复这个类中的某个缺陷是一个 CL，不要把它们合并到一个 CL 中。把它们拆分出来更有利于审核者理解代码的变化。
 
 Small cleanups such as fixing a local variable name can be included inside of a
 feature change or bug fix CL, though. It's up to the judgment of developers and
 reviewers to decide when a refactoring is so large that it will make the review
 more difficult if included in your current CL.
+有些代码清理工作，如修改某个类中的一个变量的名称，可以把它包含在一个功能修改或缺陷修复的 CL 中。那标准是什么呢？这取决开发者与审核者的判断，这种重构是否大到让审核工作变得很困难。
 
-## Keep related test code in the same CL {#test_code}
+## 把测试代码包含到对应功能的 CL 中 {#test_code}
 
 Avoid splitting test code into a separate CL. Tests validating your code
 modifications should go into the same CL, even if it increases the code line
 count.
+避免单独提交测试代码。测试代码用以验证代码功能，应该把它与代码提交到相同的 CL 中，虽然它会增大 CL 的代码行数。
 
 However, <i>independent</i> test modifications can go into separate CLs first,
 similar to the [refactorings guidelines](#refactoring). That includes:
+然而，<i>独立的</i>测试修改可以放到单独的 CL 中，这与[重构指南]中的观点比较类似。它包含如下：
 
-*   validating pre-existing, submitted code with new tests.
-*   refactoring the test code (e.g. introduce helper functions).
-*   introducing larger test framework code (e.g. an integration test).
+*   validating pre-existing, submitted code with new tests.为过去提交的已存在代码创建新的测试代码。
+*   refactoring the test code (e.g. introduce helper functions). 重构测试代码（例如，引入 helper 函数）。
+*   introducing larger test framework code (e.g. an integration test). 引入测试框架代码（如，集成测试）。
 
 ## 不要破坏编译 {#break}
 
@@ -160,24 +165,28 @@ make sure the whole system keeps working after each CL is submitted. Otherwise
 you might break the build for all your fellow developers for a few minutes
 between your CL submissions (or even longer if something goes wrong unexpectedly
 with your later CL submissions).
+如果同时在审核的有多个 CL，并且这些 CL 之间存在依赖关系，你需要找到一种方式，确保在依次提交 CL 时，保证整个系统仍旧运行良好。否则，可能在提交某个 CL 之后，让系统编译错误。此时，你的同事在更新代码后，不得不花时间查看你的 CL 历史并回退代码以确保本地编译没有问题（如果是你之后的 CL 提交出了问题，可能会花费更多时间）。
 
-## Can't Make it Small Enough {#cant}
+## 无法将其变小 {#cant}
 
 Sometimes you will encounter situations where it seems like your CL *has* to be
 large. This is very rarely true. Authors who practice writing small CLs can
 almost always find a way to decompose functionality into a series of small
 changes.
+在某些情形下，好像你没法然 CL 变得更小，这种情况很少发生。如果开发者经常写小 CL，那么他往往都能找到一种把 CL 拆得更小的方法。
 
 Before writing a large CL, consider whether preceding it with a refactoring-only
 CL could pave the way for a cleaner implementation. Talk to your teammates and
 see if anybody has thoughts on how to implement the functionality in small CLs
 instead.
+如果在写代码之前就估计这个 CL 比较大，此时应该考虑是否先提交一个代码重构的 CL，让已有的代码实现更清晰。或者，与团队其他成员讨论下，看是否有人能帮你指出，怎样在提交小 CL 的前提下实现当前功能。
 
 If all of these options fail (which should be extremely rare) then get consent
 from your reviewers in advance to review a large CL, so they are warned about
 what is coming. In this situation, expect to be going through the review process
 for a long time, be vigilant about not introducing bugs, and be extra diligent
 about writing tests.
+如果以上所有方法都试过，还是不可行（当然，这种情况比较罕见），那就先与所有的审核者沟通一下，告知他们你将会提交一个大 CL，让他们先有心理准备。出现这种情况时，审核过程往往会比较长，同事需要写大量的测试用例。需要警惕，不要引入新的 bug。
 
 Next: [How to Handle Reviewer Comments](handling-comments.md)
 下一章: [如何处理审核评论](handling-comments.md)
