@@ -16,28 +16,33 @@
 -   **Less likely to introduce bugs.** Since you're making fewer changes, it's
     easier for you and your reviewer to reason effectively about the impact of
     the CL and see if a bug has been introduced.
-    **引入新缺陷的可能性更小。** 
+    **引入新缺陷的可能性更小。** 如果修改的内容比较少，自然审核人的效率会更高，开发者与审核者都更容易判断是否引入了新的缺陷。
+    
 -   **Less wasted work if they are rejected.** If you write a huge CL and then
     your reviewer says that the overall direction is wrong, you've wasted a lot
     of work.
-    **如果被拒绝，浪费的时间更少。**
+    **如果被拒绝，浪费的时间更少。** 如果开发者花费了很大的精力开发了一个大 CL，直到审核的时候才知道整个开发的方向错了，那么整个时间就全浪费了。
+    
 -   **Easier to merge.** Working on a large CL takes a long time, so you will
     have lots of conflicts when you merge, and you will have to merge
     frequently.
-    **更容易合并代码。**
+    **更容易合并代码。** 大 CL 在合并代码时会花费很长的时间，在合并时需要花费大量时间，而且在写 CL 期间可能不得不频繁地合并。
+    
 -   **Easier to design well.** It's a lot easier to polish the design and code
     health of a small change than it is to refine all the details of a large
     change.
-    **更易于设计。**
+    **更易于设计。** 完善设计和代码要容易得多，多次微小的代码质量提高比一次大的设计改变更容易。
+    
 -   **Less blocking on reviews.** Sending self-contained portions of your
     overall change allows you to continue coding while you wait for your current
     CL in review.
-    **减少阻塞审核的可能性。**
+    **减少阻塞审核的可能性。** 小 CL 通常是功能独立的部分，你可能正在修改很多代码（多个小 CL），在发送一个 CL 审核时，同时可以继续修改其他的代码，并不会因为当前 CL 的审核没有完成而阻塞。
+    
 -   **Simpler to roll back.** A large CL will more likely touch files that get
     updated between the initial CL submission and a rollback CL, complicating
     the rollback (the intermediate CLs will probably need to be rolled back
     too).
-    **更容易回退。**
+    **更容易回退。** 一个大 CL 开发的时间比较长，这意味从开发到代码提交这段期间，代码文件的变更会比较多。当回退代码时，情况会变得很复杂，因为所有中间的 CL 很有可能也需要回退。
 
 Note that **reviewers have discretion to reject your change outright for the
 sole reason of it being too large.** Usually they will thank you for your
@@ -45,61 +50,78 @@ contribution but request that you somehow make it into a series of smaller
 changes. It can be a lot of work to split up a change after you've already
 written it, or require lots of time arguing about why the reviewer should accept
 your large change. It's easier to just write small CLs in the first place.
+请注意：**审核者有权因为你的 CL 太大而拒绝它。** 通常，他们会感谢你为代码做出的贡献，但是会要求你把它拆分多个小 CL。一旦写好了代码之后，要把它拆分成小 CL 通常需要花很多时间，当然，你也可能会花费大量时间与审核者争论为什么他应该接受这个大 CL 。与其如此，不如设计之初就保证 CL 尽量小。
 
 ## 如何定义“小”？ {#what_is_small}
 
 In general, the right size for a CL is **one self-contained change**. This means
 that:
+一般而言，一个 CL 的大小就应该是 **独立功能的修改**。这意味着：
 
 -   The CL makes a minimal change that addresses **just one thing**. This is
     usually just one part of a feature, rather than a whole feature at once. In
     general it's better to err on the side of writing CLs that are too small vs.
     CLs that are too large. Work with your reviewer to find out what an
     acceptable size is.
+    
+    一个 CL 尽量最小化，它只 **做一件事**。通常它只是一个功能的一部分，而不是整个功能。总体而言，CL 太小或太大都不好，二者取其轻的话，太小稍微好点。可以与审核者一起讨论，找出大多比较合适。
+    
 -   Everything the reviewer needs to understand about the CL (except future
     development) is in the CL, the CL's description, the existing codebase, or a
     CL they've already reviewed.
+    审核者需要理解 CL 中包含的一切（除了以后可能要开发的功能之外），包括 CL 代码、描述、已存在的代码（或之前已经审核过的相关 CL ）。
+    
 -   The system will continue to work well for its users and for the developers
     after the CL is checked in.
+    在 CL 代码提交之后，无论是针对用户，还是针对开发人员，系统应该仍旧运行良好。
+    
 -   The CL is not so small that its implications are difficult to understand. If
     you add a new API, you should include a usage of the API in the same CL so
     that reviewers can better understand how the API will be used. This also
     prevents checking in unused APIs.
+    如果代码难以理解，通常是以为 CL 还不够小。如果新增一个 API，同时应该同一个 CL 中附上这个 API 的使用方法，便于审核者理解如何使用，也方便以后的开发者理解。同时也可能有效防止提交的 API 无人使用。
 
 There are no hard and fast rules about how large is "too large." 100 lines is
 usually a reasonable size for a CL, and 1000 lines is usually too large, but
 it's up to the judgment of your reviewer. The number of files that a change is
 spread across also affects its "size." A 200-line change in one file might be
 okay, but spread across 50 files it would usually be too large.
+没有直观的标准判断怎样的 CL 是“太大”。 100行代码通常是一个合理的大小。1000行代码通常太大了，但也不能一概而论，这取决于审核者的判断。修改文件的个数也影响它的“大小”。在一个文件中修改200行可能没问题，如果这200行代码横跨50个文件，通常而言太大了。
 
 Keep in mind that although you have been intimately involved with your code from
 the moment you started to write it, the reviewer often has no context. What
 seems like an acceptably-sized CL to you might be overwhelming to your reviewer.
 When in doubt, write CLs that are smaller than you think you need to write.
 Reviewers rarely complain about getting CLs that are too small.
+记住，当你开始编写代码时，只有你最了解代码，而审核者通常不了解上下文。在你看起来很是一个合适大小的 CL，审核者可能会很困惑。毫无疑问，在写 CL 时，CL 的大小最好比认为的还要小。审核者通常不会抱怨你的 CL 太小了。
 
 ## 什么时候可以有大 CL ？ {#large_okay}
 
 There are a few situations in which large changes aren't as bad:
-
+当然，也有一些例外情形，允许 CL 比较大：
 -   You can usually count deletion of an entire file as being just one line of
     change, because it doesn't take the reviewer very long to review.
+    删除一个文件与修改一行没有太大区别， 因为它不会花费审核者太多时间。
+    
 -   Sometimes a large CL has been generated by an automatic refactoring tool
     that you trust completely, and the reviewer's job is just to sanity check
     and say that they really do want the change. These CLs can be larger,
     although some of the caveats from above (such as merging and testing) still
     apply.
+    有时候，一个大 CL 可能是由可靠的自动代码重构工具生成的，审核者的工作主要是检查它是否做了它应该做的工作。虽然符合以上提到的注意事项（例如合并和测试），这类 CL 也可能比较大。
 
-### Splitting by Files {#splitting-files}
+### 以文件来拆分 {#splitting-files}
 
 Another way to split up a CL is by groupings of files that will require
 different reviewers but are otherwise self-contained changes.
+另外一种拆分大 CL 的方法是：对 CL 中涉及的文件进行分组，这就要求不同独立功能的修改需要相应的审核者。
 
 For example: you send off one CL for modifications to a protocol buffer and
 another CL for changes to the code that uses that proto. You have to submit the
 proto CL before the code CL, but they can both be reviewed simultaneously. If
 you do this, you might want to inform both sets of reviewers about the other CL
 that you wrote, so that they have context for your changes.
+例如：
 
 Another example: you send one CL for a code change and another for the
 configuration or experiment that uses that code; this is easier to roll back
