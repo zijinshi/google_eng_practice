@@ -34,13 +34,6 @@
 
 ## 指导{#mentoring}
 
-Code review can have an important function of teaching developers something new
-about a language, a framework, or general software design principles. It's
-always fine to leave comments that help a developer learn something new. Sharing
-knowledge is part of improving the code health of a system over time. Just keep
-in mind that if your comment is purely educational, but not critical to meeting
-the standards described in this document, prefix it with "Nit: " or otherwise
-indicate that it's not mandatory for the author to resolve it in this CL.
 代码审查还有一项重要的功能：能让开发者学到新知识，可能是编程语言方面的，也可能是框架方面的，或一些常规的软件设计原则。作为审核者，如果你认为某些评论有助于开发者学到新知识，那就毫不犹豫地写下来吧。分享知识是提高代码质量的一种方式。记住，如果你的评论是纯学习相关的，与文档中提及的标准关系不大，那就最好在前面加上“Nit”，否则就意味着开发者必须在 CL 中修正这个问题。
 
 ## 原则 {#principles}
