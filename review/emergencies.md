@@ -1,12 +1,14 @@
 # Emergencies
 
-Sometimes there are emergency CLs that must pass through the entire code review
-process as quickly as
-possible.
+## 目录
+*   [哪些是紧急情况？](#what)
+*   [哪些不是紧急情况？](#not)
+*   [什么是硬期限？](#deadlines)
+
+有时候会有紧急的 CL。紧急情况必须尽快完成审核流程并提交。
 
 
-
-## What Is An Emergency? {#what}
+## 哪些是紧急情况？ {#what}
 
 An emergency CL would be a **small** change that: allows a major launch to
 continue instead of rolling back, fixes a bug significantly affecting users in
@@ -22,48 +24,36 @@ code reviews, when they come up.
 However, after the emergency is resolved you should look over the emergency CLs
 again and give them a [more thorough review](reviewer/looking-for.md).
 
-## What Is Not An Emergency? {#not}
+紧急 CL 应该是一个 **小** 修改：一个重要的发布需要此功能（无法回滚），修复产品中严重影响用户的缺陷，处理紧迫的法律问题，关闭一个重要的安全漏洞，等等。
+
+处于紧急情况时，我们应该关系整个代码审核流程的速度，而不仅仅是[响应的速度](reviewer/speed.md)。更准确地说，在这种情况下，审核者应该把审核速度与代码的正确性（代码是否解决了紧急问题？）放在首位。并且，当有紧急情况时，它的审核优先级必须高于其他所有的代码审核。
+
+当紧急情况处理完毕之后，应该回过头来再继续一次[更全面的审核](reviewer/looking-for.md)。
+
+## 哪些不是紧急情况？ {#not}
 
 To be clear, the following cases are *not* an emergency:
+需要明确的是，如下情形 *不是* 紧急情况：
 
--   Wanting to launch this week rather than next week (unless there is some
-    actual [hard deadline](#deadlines) for launch such as a partner agreement).
--   The developer has worked on a feature for a very long time and they really
-    want to get the CL in.
--   The reviewers are all in another timezone where it is currently nighttime or
-    they are away on an off-site.
--   It is the end of the day on a Friday and it would just be great to get this
-    CL in before the developer leaves for the weekend.
--   A manager says that this review has to be complete and the CL checked in
-    today because of a [soft (not hard) deadline](#deadlines).
--   Rolling back a CL that is causing test failures or build breakages.
+-   希望本周完成，而不是下周（除非有一些实际的[硬期限](#deadlines)如合作伙伴之间的契约）。
+-   开发者为这个功能已经开发了很长一段时间，他们希望尽快提交代码。
+-   所有的审核者都不在相同的时区，他们现在是半夜或下班时间。
+-   现在是周五快下班的时间，如果开发者能再周末离开公司之前提交代码那就太棒了。
+-   经理说这个审核必须完成，CL 在今天必须提交因今天[是截止日期(软期限，而非硬期限)](#deadlines)。
+-   回滚一个造成测试失败或编译错误的 CL。
+等等。
 
-And so on.
+## 什么是硬期限？ {#deadlines}
 
-## What Is a Hard Deadline? {#deadlines}
+硬期限（hard）就是如果错过了，就会有**灾难性的事情发生**。例如：
 
-A hard deadline is one where **something disastrous would happen** if you miss
-it. For example:
+-   合同规定，你必须在某个特定日期之前提交 CL。
+-   如果产品不在某个特定日期之前发布，很有可能会影响销量，甚至在产品市场导致失败。
+-   有些硬件制造上每年只会发布一次产品。如果在截止日期之前没有提交代码给他们，而这些代码又非常重要，很有可能会造成灾难性的后果。
 
--   Submitting your CL by a certain date is necessary for a contractual
-    obligation.
--   Your product will completely fail in the marketplace if not released by a
-    certain date.
--   Some hardware manufacturers only ship new hardware once a year. If you miss
-    the deadline to submit code to them, that could be disastrous, depending on
-    what type of code you’re trying to ship.
+推迟一周发布不是灾难性的。错过某次重要的会议可能是灾难性的，也可能不是。
 
-Delaying a release for a week is not disastrous. Missing an important conference
-might be disastrous, but often is not.
+大多数截止日期都是软期限（soft deadline）,而非不可改变的。这些软期限期望在某个时间节点得到需要的功能。他们很重要，但不应该为了达到目标而破坏代码的健康状况。
 
-Most deadlines are soft deadlines, not hard deadlines. They represent a desire
-for a feature to be done by a certain time. They are important, but you
-shouldn’t be sacrificing code health to make them.
+如果发布周期较长（好几个月），则很有可能会牺牲代码质量，以期在下一个周期之前实现某个功能。如果这种模式反复出现，那就为项目建起了难以承受的技术债，这是项目开发中常见的问题。如果开发者经常在临近开发周期结束的时候提交代码，那么团队“必定”仅仅是表面上的代码审核。此时，团队应该修改开发流程，大型的功能修改应该在周期的早期进行，有足够的时间进行好的审核。
 
-If you have a long release cycle (several weeks) it can be tempting to sacrifice
-code review quality to get a feature in before the next cycle. However, this
-pattern, if repeated, is a common way for projects to build up overwhelming
-technical debt. If developers are routinely submitting CLs near the end of the
-cycle that "must get in" with only superficial review, then the team should
-modify its process so that large feature changes happen early in the cycle and
-have enough time for good review.
