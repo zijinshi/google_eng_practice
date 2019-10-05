@@ -72,13 +72,7 @@ CL 描述的 **第一行** 应该是一句简短的描述，用以说明 *CL做�
 
 ### 需要一些上下文的小 CL {#small_cl_context}
 
-> Create a Python3 build rule for status.py. 为 status.py 创建一个 Python3 的编译。
->
-> This allows consumers who are already using this as in Python3 to depend on a
-> rule that is next to the original status build rule instead of somewhere in
-> their own tree. It encourages new consumers to use Python3 if they can,
-> instead of Python2, and significantly simplifies some automated build file
-> refactoring tools being worked on currently.
+> 为 status.py 创建一个 Python3 的编译。
 >
 > 在原始的编译（Python2）旁创建一个 Python3 的编译，让已经使用过 Python3 编译的用户根据某些规则选择 Python3 还是 Python2，而不是依赖于某个路径。 它鼓励新用户尽可能使用 Python3 而不是 Python2，并大大简化了当前正在使用的某些自动编译文件重构工具。
 >
