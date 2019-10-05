@@ -1,4 +1,4 @@
-# 如何处理审核评论
+# 如何处理审核者的评论
 
 When you've sent a CL out for review, it's likely that your reviewer will
 respond with several comments on your CL. Here are some useful things to know
