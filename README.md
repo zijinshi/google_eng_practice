@@ -19,7 +19,7 @@ Google有很多优秀的工程实践，它几乎覆盖了所有的编程语言�
 本文遵守 CC-By 3.0 License。
 
 英文原文来自 [https://github.com/google/eng-practices](https://github.com/google/eng-practices)，中文版由 [ zijinshi ](https://github.com/zijinshi) 翻译整理。根据中文表达习惯，在原文基础上有少量删改。
-中文版同时发布在网站 [星光灿烂](https://delphi.zijinshi.org)。
+中文版同时发布在网站 [星光灿烂](https://delphi.zijinshi.org) 与 [Google的工程实践文档](https://zijinshi.github.io/google_eng_practice/index)。
 
 The documents in this project are licensed under the CC-By 3.0 License, which
 encourages you to share these documents. See
