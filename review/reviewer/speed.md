@@ -1,5 +1,16 @@
 # 审核的速度
 
+## 目录
+*   [为什么应该尽快审核代码](#why)
+*   [代码审核应该多迅速？](#fast)
+*   [速度 vs. 中断](#interruption)
+*   [快速响应](#responses)
+*   [跨时区的审核](#tz)
+*   [LGTM的评论](#lgtm-with-comments)
+*   [大 CL](#large)
+*   [代码审核在不断改善中](#time)
+*   [紧急情况](#emergencies)
+
 ## 为什么应该尽快审核代码 {#why}
 
 **在Google，我们优化了团队开发产品的的速度**，而不是优化单个开发人员写代码的速度。单个开发人员的开发速度固然重要，但远没有整个团队的开发速度 _重要_ 。
@@ -40,7 +51,7 @@
 
 当有时差时，尽量在开发者离开办公室之前给他反馈。如果对方已经下班回家，尽量确保在他在第二天早上来公司之前给出反馈。
 
-## LGTM的反馈 {#lgtm-with-comments}
+## LGTM的评论 {#lgtm-with-comments}
 
 为了加快代码审核，有一些确定的场景，你应该给出 LGTM/赞同 的反馈，即使开发者仍有一些未处理的反馈（unresolved comments）。这些场景如下（满足任一场景即可）：
 
@@ -59,17 +70,11 @@ LGTM 特别值得考虑，尤其是当开发者与审核者跨时区时，否则
 
 ## 代码审核在不断改善中 {#time}
 
-If you follow these guidelines and you are strict with your code reviews, you
-should find that the entire code review process tends to go faster and faster
-over time. Developers learn what is required for healthy code, and send you CLs
-that are great from the start, requiring less and less review time. Reviewers
-learn to respond quickly and not add unnecessary latency into the review
-process.
 在遵循本文中的建议进行代码审核之后，尽管代码审核很严格，你会发现，在运行一段时间后，整个流程会越来越快。开发者学会了健康的代码需要什么，在发送 CL 之前会尽量保证代码质量，因此需要审核的时间会越来越短。审核者学会了快速响应，不会在审核中增加不必要的延时。
 
 但是， **不要为了想象中的速度提升，在[代码审核标准](standard.md)或质量上妥协**  ——实际上，从长期来，这样做并不会节省时间。
 
-## 紧急情况
+## 紧急情况 {#emergencies}
 
 当然，也会有[紧急情况](../emergencies.md)，要求审核流程尽快完成，此时质量向导也有适当的弹性空间。但是，请先查看一下[什么是紧急情况](../emergencies.md#what)，这篇文章详细讲述了哪些情况属于紧急情况，哪些不是。
 
