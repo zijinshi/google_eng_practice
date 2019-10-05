@@ -4,10 +4,10 @@
 *   [设计](#design)
 *   [功能](#functionality)
 *   [复杂性](#complexity)
-*   [测试](#Tests)
+*   [测试](#tests)
 *   [命名](#naming)
 *   [注释](#comments)
-*   [代码样式](#tests)
+*   [代码样式](#style)
 *   [文档](#documentation)
 *   [每行代码](#every_line)
 *   [上下文](#contexts)
@@ -60,7 +60,7 @@
 
 注意，注释与类、模块、功能的 *文档* 是不同的，这类文档应该描述代码的功能，怎样被调用，以及被调用时它的行为是什么。
 
-## 样式 {#style}
+## 代码样式 {#style}
 
 在Google，我们所有的主要编程语言都要遵循[代码样式指南](http://google.github.io/styleguide/)，确保 CL 遵守代码样式指南中的建议。
 
