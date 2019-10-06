@@ -10,20 +10,6 @@
 
 ## 哪些是紧急情况？ {#what}
 
-An emergency CL would be a **small** change that: allows a major launch to
-continue instead of rolling back, fixes a bug significantly affecting users in
-production, handles a pressing legal issue, closes a major security hole, etc.
-
-In emergencies we really do care about the speed of the entire code review
-process, not just the [speed of response](reviewer/speed.md). In this case
-*only*, the reviewer should care more about the speed of the review and the
-correctness of the code (does it actually resolve the emergency?) than anything
-else. Also (perhaps obviously) such reviews should take priority over all other
-code reviews, when they come up.
-
-However, after the emergency is resolved you should look over the emergency CLs
-again and give them a [more thorough review](reviewer/looking-for.md).
-
 紧急 CL 应该是一个 **小** 修改：一个重要的发布需要此功能（无法回滚），修复产品中严重影响用户的缺陷，处理紧迫的法律问题，关闭一个重要的安全漏洞，等等。
 
 处于紧急情况时，我们应该关系整个代码审核流程的速度，而不仅仅是[响应的速度](reviewer/speed.md)。更准确地说，在这种情况下，审核者应该把审核速度与代码的正确性（代码是否解决了紧急问题？）放在首位。并且，当有紧急情况时，它的审核优先级必须高于其他所有的代码审核。
@@ -32,7 +18,6 @@ again and give them a [more thorough review](reviewer/looking-for.md).
 
 ## 哪些不是紧急情况？ {#not}
 
-To be clear, the following cases are *not* an emergency:
 需要明确的是，如下情形 *不是* 紧急情况：
 
 -   希望本周完成，而不是下周（除非有一些实际的[硬期限](#deadlines)如合作伙伴之间的契约）。
