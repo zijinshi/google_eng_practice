@@ -3,7 +3,7 @@
 Google有很多优秀的工程实践，这些实践遍布公司内的所有项目，覆盖了几乎所有编程语言。 随着开发项目的增多，我们不断总结经验，把这些最佳实践以文档的形式整理出来。这份文档是我们集体经验的结晶。除了我们之外，相信其他公司、组织或开源项目也能从中受益，现在时机成熟了，我们决定将其公开发布。
 
 这份工程实践文档包含如下内容：
-*   [Google的代码审核指南 (Google's Code Review Guidelines)](review/index.md), 它包含两部分:
+*   [Google的代码审核指南 (Google's Code Review Guidelines)](review/index.md)，它包含两部分：
     *   [代码审核者指南 (The Code Reviewer's Guide)](review/reviewer/index.md)
     *   [代码提交者指南 (The Change Author's Guide)](review/developer/index.md)
 
