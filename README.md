@@ -21,7 +21,6 @@ Google有很多优秀的工程实践，这些实践遍布公司内的所有项�
 英文原文来自 [Google's Engineering Practices documentation](https://github.com/google/eng-practices)，中文版由 [ zijinshi ](https://github.com/zijinshi) 翻译整理。根据中文表达习惯，在原文基础上有少量删改。
 
 中文版同时发布于网站：
-*   [星光灿烂](https://delphi.zijinshi.org)
 *   [Google的工程实践文档](https://zijinshi.github.io/google_eng_practice/index)
 
 The documents in this project are licensed under the CC-By 3.0 License, which
