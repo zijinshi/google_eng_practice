@@ -15,9 +15,8 @@ Google有很多优秀的工程实践，这些实践遍布公司内的所有项�
 *   **LGTM**： “Looks Good to Me.” 的缩写，“看起来不错”。 当一个审核者这么说的时候，意味着他会批准这个CL。
 *   **g3doc**： Google内部的工程文档平台。
 
-## License
-本文遵守 CC-By 3.0 License（[中文版](https://creativecommons.org/licenses/by/3.0/deed.zh)、[英文版](https://creativecommons.org/licenses/by/3.0/)）。
 
+## 说明
 英文原文来自 [Google's Engineering Practices documentation](https://github.com/google/eng-practices)，中文版由 [ zijinshi ](https://github.com/zijinshi) 翻译整理。根据中文表达习惯，在原文基础上有少量删改。
 
 
@@ -31,6 +30,11 @@ Google有很多优秀的工程实践，这些实践遍布公司内的所有项�
 
 PDF版本下载：
 *   [Google的工程实践文档](https://github.com/zijinshi/google_eng_practice/raw/gitbook/Google%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%E6%96%87%E6%A1%A3.pdf)
+
+[译者序](preface.md)
+
+## License
+本文遵守 CC-By 3.0 License（[中文版](https://creativecommons.org/licenses/by/3.0/deed.zh)、[英文版](https://creativecommons.org/licenses/by/3.0/)）。
 
 The documents in this project are licensed under the CC-By 3.0 License, which
 encourages you to share these documents. See
