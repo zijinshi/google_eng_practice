@@ -1,6 +1,6 @@
 # 目录
 
-* [Goole代码实践的一些感悟](readme.md)
+* [Goole代码实践的一些感悟](README.md)
 * [Google的工程实践文档](introduction.md)
 * [代码审核指南](review.md)
 * [怎样做代码审核](index/README.md)
