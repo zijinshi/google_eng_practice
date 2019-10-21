@@ -43,15 +43,15 @@
       
         "pageNumbers": true,
 
-        "fontSize": 18,
+        "fontSize": 15,
 
         "paperSize": "a4",
 
         "margin": {
-            "right": 62,
-            "left": 62,
-            "top": 36,
-            "bottom": 36
+            "right": 32,
+            "left": 32,
+            "top": 26,
+            "bottom": 26
         },
 
   
