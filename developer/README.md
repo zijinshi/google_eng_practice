@@ -10,5 +10,5 @@ description: 代码开发者指南
 * [小 CL ](small-cls.md) 
 * [怎样处理审核者的评论](handling-comments.md)
 
-如果你是代码审核者，可以参考[怎样做代码审核](../index/)。
+如果你是代码审核者，可以参考[怎样做代码审核](../index/README.md)。
 

@@ -5,8 +5,8 @@ Google有很多优秀的工程实践，这些实践遍布公司内的所有项�
 这份工程实践文档包含如下内容：
 
 * [Google的代码审核指南 \(Google's Code Review Guidelines\)](review.md)，它包含两部分：
-  * [代码审核者指南 \(The Code Reviewer's Guide\)](index/)
-  * [代码提交者指南 \(The Change Author's Guide\)](developer/)
+  * [代码审核者指南 \(The Code Reviewer's Guide\)](index/README.md)
+  * [代码提交者指南 \(The Change Author's Guide\)](developer/README.md)
 
 ## 术语
 
@@ -35,7 +35,7 @@ PDF版本下载：
 
 * [Google的工程实践文档](https://github.com/zijinshi/google_eng_practice/raw/gitbook/Google%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%E6%96%87%E6%A1%A3.pdf)
 
-[Google工程实践的一些感悟](./)
+[Google工程实践的一些感悟](README.md)
 
 The documents in this project are licensed under the CC-By 3.0 License, which encourages you to share these documents. See [https://creativecommons.org/licenses/by/3.0/](https://creativecommons.org/licenses/by/3.0/) for more details.
 

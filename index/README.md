@@ -9,5 +9,5 @@
 * [怎样写代码审核的评论？ （How to Write Code Review Comments）](comments.md)
 * [代码评论被拒绝时，应如何处理？ （Handling Pushback in Code Reviews）](pushback.md)
 
-本文档是针对代码审核者的指南，至于代码提交者，可以参见这篇文档： [代码提交者指南 （CL Author's Guide）](https://github.com/zijinshi/google_eng_practice/tree/17b1746a0624c548ec2ba4ee75753bac8d4f5c9d/review/developer/README.md)。
+本文档是针对代码审核者的指南，至于代码提交者，可以参见这篇文档： [代码提交者指南 （CL Author's Guide）](../developer/README.md)。
 
