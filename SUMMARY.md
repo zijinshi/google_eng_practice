@@ -1,7 +1,7 @@
 # Table of contents
 
+* [Google的工程实践文档](README.md)
 * [Goole代码实践的一些感悟](preface.md)
-* [Google的工程实践文档](readme.md)
 * [代码审核指南](review.md)
 * [怎样做代码审核](index/README.md)
   * [代码审核的标准](index/standard.md)
