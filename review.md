@@ -10,8 +10,8 @@
 
 本节对代码审核过程作简要介绍，后面的两篇文档会做更详细的说明：
 
-* [**怎样做代码审核**](https://github.com/zijinshi/google_eng_practice/blob/master/review/reviewer) ：针对代码审核者的指南。
-* [**开发者指南**](https://github.com/zijinshi/google_eng_practice/blob/master/review/developer) ：针对 CL 提交者的指南。
+* \*\*\*\*[**怎样做代码审核**](index/) ：针对代码审核者的指南。
+* \*\*\*\*[**开发者指南** ](developer/)：针对 CL 提交者的指南。
 
 ## 代码审核者应该看什么？
 
