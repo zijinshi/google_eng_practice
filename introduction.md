@@ -35,7 +35,7 @@ PDF版本下载：
 
 * [Google的工程实践文档](https://github.com/zijinshi/google_eng_practice/raw/gitbook/Google%E7%9A%84%E5%B7%A5%E7%A8%8B%E5%AE%9E%E8%B7%B5%E6%96%87%E6%A1%A3.pdf)
 
-[Google代码实践的一些感悟](preface.md)
+[Google工程实践的一些感悟](./)
 
 The documents in this project are licensed under the CC-By 3.0 License, which encourages you to share these documents. See [https://creativecommons.org/licenses/by/3.0/](https://creativecommons.org/licenses/by/3.0/) for more details.
 
