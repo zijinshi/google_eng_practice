@@ -48,8 +48,8 @@
         "paperSize": "a4",
 
         "margin": {
-            "right": 32,
-            "left": 32,
+            "right": 28,
+            "left": 28,
             "top": 26,
             "bottom": 26
         },
