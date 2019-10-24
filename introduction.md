@@ -29,7 +29,8 @@ Google有很多优秀的工程实践，这些实践遍布公司内的所有项�
 
 中文版同时发布于网站：
 
-* [Google的工程实践文档](https://zijinshi.github.io/google_eng_practice/index)
+* [Google的工程实践文档(Github)](https://zijinshi.github.io/google_eng_practice/index)
+* [Google的工程实践文档(Gitbook)](https://zijinshi.gitbook.io/google)
 
 PDF版本下载：
 
