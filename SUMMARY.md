@@ -5,7 +5,7 @@
 * [代码审核指南](review.md)
 * [怎样做代码审核](index/README.md)
     * [代码审核的标准](index/standard.md)
-    * [在代码审核过程中要看些什么？](index/looking-for.md)
+    * [代码审核过程中要看些什么？](index/looking-for.md)
     * [代码审核的步骤](index/navigate.md)
     * [代码审核的速度](index/speed.md)
     * [怎样写代码审核的评论？](index/comments.md)
