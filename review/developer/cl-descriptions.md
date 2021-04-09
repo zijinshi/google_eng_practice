@@ -5,7 +5,7 @@
 *   [描述内容要提供充分的信息](#informative)
 *   [糟糕的 CL 描述](#bad)
 *   [良好的 CL 描述](#good)
-    * [功能修改](#function_change)
+    * [功能变更](#function_change)
     * [重构](#refactoring)
     * [需要一些上下文的小 CL](#small_cl_context)
 *   [提交 CL 之前审核描述](#review_before_submit)
@@ -48,7 +48,7 @@ CL 描述的 **第一行** 应该是一句简短的描述，用以说明 *CL做�
 
 这是几个良好描述的样例。
 
-### 功能修改 {#function_change}
+### 功能变更 {#function_change}
 
 > RPC：移除 RPC 服务器的消息空闲列表的大小限制。
 > 
@@ -82,6 +82,6 @@ CL 描述的 **第一行** 应该是一句简短的描述，用以说明 *CL做�
 
 ## 提交 CL 之前审核描述 {#review_before_submit}
 
-在审核过程中，CL 可能会发生重大改变（与最初提交审核的 CL 相比）。在提交 CL 之前有必要再审视一遍 CL 描述，确保描述能够正确地反映 CL 做了什么。
+在审核过程中，CL 可能会发生重大改动（与最初提交审核的 CL 相比）。在提交 CL 之前有必要再审视一遍 CL 描述，确保描述能够正确地反映 CL 做了什么。
 
 下一章: [小 CL](small-cls.md)
